@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Zone Management</title>
+</head>
+<body>
+    <h1>DNS Zones</h1>
+    <ul>
+        {% for zone in zones %}
+            <li><a href="{{ url_for('view_zone', zone_name=zone) }}">{{ zone }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

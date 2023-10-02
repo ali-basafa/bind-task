@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add DNS Record</title>
+</head>
+<body>
+    <h1>Add DNS Record to {{ zone_name }}</h1>
+    <form method="POST">
+        <label for="record_type">Record Type:</label>
+        <input type="text" name="record_type" required><br>
+
+        <label for="record_name">Record Name:</label>
+        <input type="text" name="record_name" required><br>
+
+        <label for="record_value">Record Value:</label>
+        <input type="text" name="record_value" required><br>
+
+        <input type="submit" value="Add Record">
+    </form>
+</body>
+</html>

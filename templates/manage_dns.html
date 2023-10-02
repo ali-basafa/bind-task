@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DNS Management</title>
+</head>
+<body>
+    <h1>DNS Management</h1>
+
+    <form method="POST">
+        <label for="zone_name">Zone Name:</label>
+        <input type="text" name="zone_name" required>
+        <br>
+
+        <label for="record_type">Record Type:</label>
+        <input type="text" name="record_type" required>
+        <br>
+
+        <label for="record_name">Record Name:</label>
+        <input type="text" name="record_name" required>
+        <br>
+
+        <label for="record_value">Record Value:</label>
+        <input type="text" name="record_value" required>
+        <br>
+
+        <input type="submit" value="Add Record">
+    </form>
+
+    <h2>Available DNS Zones:</h2>
+    <ul>
+        {% for zone in zones %}
+            <li><a href="{{ url_for('index', zone_name=zone) }}">{{ zone }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <h2>Zone Content:</h2>
+    <pre>{{ zone_content }}</pre>
