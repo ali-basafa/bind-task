@@ -39,7 +39,6 @@ def create_or_update_zone(name: str, serial: int):
         "\n"
         f"@       IN      NS      ns1.{name}.\n"
         "ns1     IN      A       127.0.0.1\n"
-#        "@       IN      A       193.176.241.76\n"
     )
 
     with open(file, 'w') as f:
